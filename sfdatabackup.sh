@@ -60,6 +60,7 @@ done
 find $HOME/SFBackup/Backup_Folders/$NOW-data -size  0 -print0 |xargs -0 rm --
 
 ## zip the files and move them to the backup files folders
+## we use zip here since the colleagues aren't able to open tar files on their windows machines
 cd $HOME/SFBackup/Backup_Folders
 zip -r $NOW-data.zip $NOW-data
 mv $NOW-data.zip $HOME/SFBackup/Backup_Files
